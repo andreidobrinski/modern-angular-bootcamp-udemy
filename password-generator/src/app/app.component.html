@@ -32,7 +32,12 @@
 </div>
 
 <div>
-  <button (click)="onButtonClick()">Generate</button>
+  <button
+    (click)="onButtonClick()"
+    [disabled]="!(length && (includeLetters || includeNumbers || includeSymbols))"
+  >
+    Generate
+  </button>
 </div>
 
 <div>
