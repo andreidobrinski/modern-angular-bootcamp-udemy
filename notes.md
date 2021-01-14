@@ -22,3 +22,7 @@
 
 - `[value]`: name of property we want to set on element
 - `password`: name of property in the class. evaluated as code
+
+## Interpolation
+
+`{{ variableName }}` or `{{ callFn() }}`
