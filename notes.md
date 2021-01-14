@@ -12,5 +12,13 @@
 ## Event Binding Syntax
 
 <button (click)="onButtonClick()" />
-`click`: name of event to watch for
-`onButtonClick()`: what function to call. evaluated as code
+
+- `(click)`: name of event to watch for
+- `onButtonClick()`: what function to call. evaluated as code
+
+## Property Binding Syntax
+
+<input [value]="password" />
+
+- `[value]`: name of property we want to set on element
+- `password`: name of property in the class. evaluated as code
