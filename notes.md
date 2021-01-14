@@ -26,3 +26,9 @@
 ## Interpolation
 
 `{{ variableName }}` or `{{ callFn() }}`
+
+## Directives
+
+Structural Directive: adds or removes HTML elements. `*ngIf`
+
+Attribute Directives: changes the properties of the HTML element it gets applied to. `appStrikethrough`
