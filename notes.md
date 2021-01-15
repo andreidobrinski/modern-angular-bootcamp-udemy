@@ -32,3 +32,8 @@
 Structural Directive: adds or removes HTML elements. `*ngIf`
 
 Attribute Directives: changes the properties of the HTML element it gets applied to. `appStrikethrough`
+
+## CSS
+
+- CSS in styles.css are applied to the whole app
+- CSS in `[something].component.css` is scoped to `something`
