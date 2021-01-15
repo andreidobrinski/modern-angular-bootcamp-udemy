@@ -37,3 +37,11 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 
 - CSS in styles.css are applied to the whole app
 - CSS in `[something].component.css` is scoped to `something`
+
+## Passing info from parent to child
+
+1. In the parent component, find where we call the child component
+2. Decide on the property name we want to use to communicate from parent to child
+3. Add a new binding to child component, specifying the data we want to pass down
+4. In the child component's class file, add an input property. This tells the child component to expect the parent to provide the value
+5. In the child component template file, reference that input property (interpolation)
