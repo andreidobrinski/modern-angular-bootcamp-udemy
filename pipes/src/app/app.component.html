@@ -31,4 +31,19 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Amount</label>
+      <input
+        (input)="onAmountChange($event.target.value)"
+        class="form-control"
+      />
+    </div>
+    <div class="col">
+      <label><b>Payment Amount</b></label>
+      <div>
+        {{ amount | currency: "JPY" }}
+      </div>
+    </div>
+  </div>
 </div>
