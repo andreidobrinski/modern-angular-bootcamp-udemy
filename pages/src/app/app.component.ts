@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pages';
+  images = [
+    {
+      title: 'One',
+      url: 'https://source.unsplash.com/random'
+    },
+    {
+      title: 'Two',
+      url: 'https://source.unsplash.com/random'
+    },
+    {
+      title: 'Three',
+      url: 'https://source.unsplash.com/random'
+    },
+    {
+      title: 'Four',
+      url: 'https://source.unsplash.com/random'
+    }
+  ];
 }
