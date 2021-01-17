@@ -45,3 +45,9 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 3. Add a new binding to child component, specifying the data we want to pass down
 4. In the child component's class file, add an input property. This tells the child component to expect the parent to provide the value
 5. In the child component template file, reference that input property (interpolation)
+
+## Pipes
+
+- Functions that format data for use in a template
+- Used only in a template
+- Built-in pipes + can build custom pipes
