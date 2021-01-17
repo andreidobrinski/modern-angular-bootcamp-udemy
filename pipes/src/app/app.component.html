@@ -15,4 +15,20 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input
+        (input)="onDateChange($event.target.value)"
+        class="form-control"
+        type="date"
+      />
+    </div>
+    <div class="col">
+      <label><b>Payment Date</b></label>
+      <div>
+        {{ date | date: "MMMM d, y" }}
+      </div>
+    </div>
+  </div>
 </div>
