@@ -9,20 +9,20 @@ export class AppComponent {
   currentPage = 0;
   images = [
     {
-      title: 'One',
-      url: 'https://source.unsplash.com/random'
+      title: 'Nature',
+      url: 'https://source.unsplash.com/featured/?nature'
     },
     {
-      title: 'Two',
-      url: 'https://source.unsplash.com/random'
+      title: 'Space',
+      url: 'https://source.unsplash.com/featured/?space'
     },
     {
-      title: 'Three',
-      url: 'https://source.unsplash.com/random'
+      title: 'Trees',
+      url: 'https://source.unsplash.com/featured/?trees'
     },
     {
-      title: 'Four',
-      url: 'https://source.unsplash.com/random'
+      title: 'Water',
+      url: 'https://source.unsplash.com/featured/?water'
     }
   ];
 }
