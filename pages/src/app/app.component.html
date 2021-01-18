@@ -9,7 +9,7 @@
         class="page-link"
       >Prev</a>
     </li>
-    <ng-container *ngFor="let image of images; let i = index;" >
+    <ng-container *appTimes="images.length; let i = index">
       <li
       class="page-item"
       [appClass]="{ active: i === currentPage }"
@@ -52,7 +52,3 @@
     Unknown current page
   </div>
 </div>
-
-<ul *appTimes="5">
-  <li>hello</li>
-</ul>
