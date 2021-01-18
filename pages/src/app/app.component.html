@@ -37,3 +37,18 @@
   <h4>{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" />
 </div>
+
+<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">
+    Current page is 0
+  </div>
+  <div *ngSwitchCase="1">
+    Current page is 1
+  </div>
+  <div *ngSwitchCase="2">
+    Current page is 2
+  </div>
+  <div *ngSwitchDefault>
+    Unknown current page
+  </div>
+</div>
