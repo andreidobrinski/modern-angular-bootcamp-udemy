@@ -62,3 +62,11 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 3. Routing: defines routing rules
 4. Service: defines a service that will be used in multiple parts of the app
 5. Widget: defines some reusabe components that will be used in multiple other modules
+
+**Modules Properties**
+
+1. Declarations: list of components, pipes, directives that are created in the module
+2. Imports: list of modules that this module depends on
+3. Exports: list of components, pipes, directives that this modules makes available to other modules
+4. Providers: old way of connecting modules and services
+5. Bootstrap: used by AppModule only to declare what components will be displayed first
