@@ -31,6 +31,9 @@
 
 Structural Directive: adds or removes HTML elements. `*ngIf`
 
+- Can only apply one structural directive to an element
+- use ng-container to apply an extra structural directive
+
 Attribute Directives: changes the properties of the HTML element it gets applied to. `appStrikethrough`
 
 ## CSS

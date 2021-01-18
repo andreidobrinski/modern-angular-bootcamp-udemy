@@ -105,4 +105,8 @@ export class AppComponent {
       url: 'https://source.unsplash.com/featured/?water'
     },
   ];
+
+  checkWindowIndex(index: number) {
+    return Math.abs(this.currentPage - index) < 5;
+  }
 }
