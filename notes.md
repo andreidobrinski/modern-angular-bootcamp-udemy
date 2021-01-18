@@ -54,3 +54,11 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 - Functions that format data for use in a template
 - Used only in a template
 - Built-in pipes + can build custom pipes
+
+## Modules
+
+1. Domain: wraps up all components needed to implement a single feature
+2. Routed: same as domain but components are tied to routes
+3. Routing: defines routing rules
+4. Service: defines a service that will be used in multiple parts of the app
+5. Widget: defines some reusabe components that will be used in multiple other modules
