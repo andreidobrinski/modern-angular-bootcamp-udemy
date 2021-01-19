@@ -10,20 +10,24 @@ export class CollectionsHomeComponent implements OnInit {
     {
       name: 'name',
       age: 41,
-      job: 'job'
+      job: 'job',
+      employed: true,
     },
     {
       name: 'name2',
       age: 43,
-      job: 'job2'
+      job: 'job2',
+      employed: false,
     },
     {
       name: 'nam3',
       age: 43,
-      job: 'job3'
+      job: 'job3',
+      employed: true,
     },
   ];
   headers = [
+    { key: 'employed', label: 'Has a job?' },
     { key: 'name', label: 'Name' },
     { key: 'age', label: 'Age' },
     { key: 'job', label: 'Job' },
