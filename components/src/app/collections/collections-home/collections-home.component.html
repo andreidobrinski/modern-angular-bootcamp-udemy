@@ -6,7 +6,12 @@
   <div class="four wide column">
     <div class="ui vertical fluid tabular menu">
       <!--can also use /collections absolute route-->
-      <a routerLink="./" routerLinkActive="active" class="item">
+      <a
+        routerLink="./"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="item"
+      >
         Biography
       </a>
       <a routerLink="companies" routerLinkActive="active" class="item">
