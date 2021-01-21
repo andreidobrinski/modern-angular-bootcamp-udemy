@@ -1,5 +1,5 @@
 <div (click)="onCloseClick()" class="ui dimmer visible active">
-  <div class="ui modal visible active">
+  <div (click)="$event.stopPropagation()" class="ui modal visible active">
     <i (click)="onCloseClick()" class="close icon"></i>
     <div class="header">
       Modal
