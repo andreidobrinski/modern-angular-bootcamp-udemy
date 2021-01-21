@@ -1,6 +1,6 @@
-<div class="ui dimmer visible active">
+<div (click)="onCloseClick()" class="ui dimmer visible active">
   <div class="ui modal visible active">
-    <i class="close icon"></i>
+    <i (click)="onCloseClick()" class="close icon"></i>
     <div class="header">
       Modal
     </div>
@@ -9,7 +9,7 @@
         some content for the modal
       </p>
     </div>
-    <div class="actions">
+    <div (click)="onCloseClick()" class="actions">
       <button class="ui button">OK</button>
     </div>
   </div>
