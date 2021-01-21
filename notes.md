@@ -70,3 +70,9 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 3. Exports: list of components, pipes, directives that this modules makes available to other modules
 4. Providers: old way of connecting modules and services
 5. Bootstrap: used by AppModule only to declare what components will be displayed first
+
+## Lifecycle Hooks
+
+1. `ngOnInit`: called once after the component is first displayed on the screen and after Angular has set any properties passed down from the parent
+2. `ngOnDestroy`: called once when Angular is about to remove this component
+3. `ngOnChanges`: called anytime a property of the component is changed (including when a parent component passes down new data)
