@@ -84,3 +84,15 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 - data flows from service to component
 - services are implemented as classes
 - angular automatically creates a single instance fo each service for us
+
+## Dependency Injection
+
+@Injectable decorator creates a single instance of a class and passes the instance to use in components.
+
+- components, services etc in angular ask for dependencies rather than creating them directly
+- components need other things to work correctly (items from constructor).
+  - angular components do not create dependencies directly, ie. `this.thing = new Thing()` is uncommon
+  - instead, dependencies are created separately and passed into the app component
+- typically done in constuctor, `constructor(private thing: Thing)`
+- the goal of dependency injection makes testing components easier
+- theoretically makes code reuse and code changes easier
