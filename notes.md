@@ -76,3 +76,11 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 1. `ngOnInit`: called once after the component is first displayed on the screen and after Angular has set any properties passed down from the parent
 2. `ngOnDestroy`: called once when Angular is about to remove this component
 3. `ngOnChanges`: called anytime a property of the component is changed (including when a parent component passes down new data)
+
+## Services
+
+- used to fetch/store/update any kind of data
+- almost always where we put network requests
+- data flows from service to component
+- services are implemented as classes
+- angular automatically creates a single instance fo each service for us
