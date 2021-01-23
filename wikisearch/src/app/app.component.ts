@@ -10,9 +10,11 @@ export class AppComponent {
   // creates wikipedia var as an instance of WikipediaService
   constructor(private wikipedia: WikipediaService) {}
 
+  pages = [];
+
   onTerm(term: string) {
-    this.wikipedia.search(term).subscribe((response) => {
-      console.log(response)
+    this.wikipedia.search(term).subscribe((response: any) => {
+      this.pages = response.query.search;
     });
   }
 }
