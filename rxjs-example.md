@@ -79,3 +79,32 @@ observable.subscribe({
   },
 });
 ```
+
+Low level observable
+
+```js
+const { Observable } = Rx;
+
+const observable = new Observable((subscriber) => {
+  // throw the value 1 into our pipeline
+  subscriber.next(1);
+
+  // marks the observable as complete. no more values will come out
+  subscriber.complete();
+
+  // emit an error. no more values will come out
+  subscriber.error(new Error("asdf"));
+}).pipe();
+
+observable.subscribe({
+  next(value) {
+    console.log("got a value", value);
+  },
+  complete() {
+    console.log("observable is complete, no more values");
+  },
+  error(err) {
+    console.log("error", err.message);
+  },
+});
+```
