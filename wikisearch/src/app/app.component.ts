@@ -13,8 +13,8 @@ export class AppComponent {
   pages = [];
 
   onTerm(term: string) {
-    this.wikipedia.search(term).subscribe((response: any) => {
-      this.pages = response.query.search;
+    this.wikipedia.search(term).subscribe((response) => {
+      this.pages = response;
     });
   }
 }
