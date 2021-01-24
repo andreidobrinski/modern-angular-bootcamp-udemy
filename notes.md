@@ -96,3 +96,11 @@ Attribute Directives: changes the properties of the HTML element it gets applied
 - typically done in constuctor, `constructor(private thing: Thing)`
 - the goal of dependency injection makes testing components easier
 - theoretically makes code reuse and code changes easier
+
+## rxjs
+
+functional reactive programming library
+
+- separate from angular
+- used commonly on angular projects for managing data
+- used instead of promises or async/await for handling async data
