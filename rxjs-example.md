@@ -184,3 +184,14 @@ observable.subscribe((value) => console.log("from second subscribe", value));
 ```
 
 ## Hot vs Cold Observables
+
+- not interchangeable with uni/multicast
+- though multicast is usually hot and unicast is usually cold
+
+Hot Observable: single event stream shared for all subscribers old and new
+
+- a new subscriber that subscribes after the observable emits events will only receive events emitted after they subscribe
+
+Cold Observable: event stream recreated for each new subscriber
+
+- a new subscriber will receive all past events
