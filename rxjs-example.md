@@ -63,4 +63,13 @@ const observable = fromEvent(input, "input").pipe(
     return value;
   })
 );
+
+observable.subscribe({
+  next(value) {
+    console.log(`Your value is ${value}`);
+  },
+  error(err) {
+    console.error("Error", err.message);
+  },
+});
 ```
