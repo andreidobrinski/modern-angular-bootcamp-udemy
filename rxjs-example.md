@@ -107,4 +107,12 @@ observable.subscribe({
     console.log("error", err.message);
   },
 });
+
+// alternate observer syntax
+observable.subscribe(
+  (value) => console.log("next thing", value),
+  // second and third arguments are optional since the focus is on next()
+  (err) => console.error("error", err.message),
+  () => console.log("complete")
+);
 ```
