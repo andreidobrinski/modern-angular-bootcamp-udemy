@@ -10,6 +10,14 @@ export class PhotoShowComponent implements OnInit {
   photoUrl: string;
 
   constructor(private photosService: PhotosService) {
+    this.fetchPhoto();
+  }
+
+  onClick() {
+    this.fetchPhoto();
+  }
+
+  fetchPhoto() {
     this.photosService.getPhoto().subscribe((response) => {
       this.photoUrl = response.urls.regular;
     });
