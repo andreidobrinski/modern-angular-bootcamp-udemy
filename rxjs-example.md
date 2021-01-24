@@ -56,11 +56,11 @@ container.appendChild(input);
 
 //rxjs
 const { fromEvent } = Rx;
-const { map } = RxOperators;
+const { map, pluck } = RxOperators;
 // or with import syntax
 
 const observable = fromEvent(input, "input").pipe(
-  map((event) => event.target.value),
+  pluck("target", "value"),
   map((value) => parseInt(value)),
   map((value) => {
     if (isNaN(value)) {
