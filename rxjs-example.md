@@ -55,6 +55,12 @@ const { map } = RxOperators;
 
 const observable = fromEvent(input, "input").pipe(
   map((event) => event.target.value),
-  map((value) => console.log(value))
+  map((value) => parseInt(value)),
+  map((value) => {
+    if (isNaN(value)) {
+      throw new Error("Enter a number");
+    }
+    return value;
+  })
 );
 ```
