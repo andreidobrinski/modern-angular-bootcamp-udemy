@@ -32,6 +32,29 @@ Observable: something that emits events over time (source of events)
 
 Operators: something that takes in a value, transforms it and passes it onto the next operator or processing step
 
+- each function (operator) has a specific process
+- commonly chained together
+- generic or specific operators
+
 Pipe: group of operators (pipeline)
 
 Observer: Result of pipeline. Handling of errors or values out of pipeline.
+
+## Example using RxJS
+
+```js
+// get input visible on screen
+const input = document.createElement("input");
+const container = document.querySelector(".container");
+container.appendChild(input);
+
+//rxjs
+const { fromEvent } = Rx;
+const { map } = RxOperators;
+// or with import syntax
+
+const observable = fromEvent(input, "input").pipe(
+  map((event) => event.target.value),
+  map((value) => console.log(value))
+);
+```
