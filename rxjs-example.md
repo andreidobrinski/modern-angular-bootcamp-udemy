@@ -36,6 +36,12 @@ Operators: something that takes in a value, transforms it and passes it onto the
 - commonly chained together
 - generic or specific operators
 
+Operator groups
+
+- Transform: take in a value, do some processing, return a new value
+- Filtering: modifies the flow of events in a pipe (group them together, pause them, delete them)
+- Creation: creates a new observable. An operator that returns an observable (fromEvent)
+
 Pipe: group of operators (pipeline)
 
 Observer: Result of pipeline. Handling of errors or values out of pipeline.
