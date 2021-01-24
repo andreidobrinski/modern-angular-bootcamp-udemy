@@ -116,3 +116,71 @@ observable.subscribe(
   () => console.log("complete")
 );
 ```
+
+## Multicast vs Unicast Observables
+
+Unicast
+
+```js
+const { Observable } = Rx;
+const { tap } = RxOperators;
+
+const observable = new Observable((subscriber) => {
+  // throw the value 1 into our pipeline
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+
+  // marks the observable as complete. no more values will come out
+  subscriber.complete();
+
+  // emit an error. no more values will come out
+  subscriber.error(new Error("asdf"));
+}).pipe(tap((value) => console.log(value)));
+
+observable.subscribe((value) => console.log("from first subscribe", value));
+
+observable.subscribe((value) => console.log("from second subscribe", value));
+```
+
+Unicast
+
+- emit a **separate set of values for each observer that subscribes**
+- all of the operators in a pipe will be executed for each separate observer that subscribes
+- can easily lead to bad behaviour
+
+Multicast
+
+- emit a **single set of values for all observers that subscribe**
+- all of the operators in a pipe are executed just once
+- the observable will be reset if it gets completed or errored, then another subscriber is added
+- issues with a later subscriber not seeing earlier events
+
+Multicast
+
+```js
+const { Observable } = Rx;
+const { tap, share } = RxOperators;
+
+const observable = new Observable((subscriber) => {
+  // throw the value 1 into our pipeline
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+
+  // marks the observable as complete. no more values will come out
+  subscriber.complete();
+
+  // emit an error. no more values will come out
+  subscriber.error(new Error("asdf"));
+}).pipe(
+  tap((value) => console.log(value)),
+  share()
+);
+
+observable.subscribe((value) => console.log("from first subscribe", value));
+
+observable.subscribe((value) => console.log("from second subscribe", value));
+```
+
+## Hot vs Cold Observables
