@@ -104,3 +104,19 @@ functional reactive programming library
 - separate from angular
 - used commonly on angular projects for managing data
 - used instead of promises or async/await for handling async data
+
+## Angular forms
+
+Reactive forms
+
+- most of the form logic is driven by configuration in a component class file
+- most appropriate for complex forms
+- exposes some aspects of the form to use as rxjs observables
+- need to wire up ReactiveFormsModule to app module to use them
+
+Template forms
+
+- most of the logic is in the component template file
+- most appropriate for single forms
+- harder to deal with dynamic forms (adding/removing elements)
+- need to wire up FormsModule to app module to use them
