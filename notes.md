@@ -120,3 +120,7 @@ Template forms
 - most appropriate for single forms
 - harder to deal with dynamic forms (adding/removing elements)
 - need to wire up FormsModule to app module to use them
+
+Input Masking: changing how inputted data looks in the UI. eg. adding a slash or formatting a certain way. Doesn't necessarily change the data stored in the model.
+
+- input masking ngx-mask package treats UI input differently than data input, which may cause issues
