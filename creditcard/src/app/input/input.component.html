@@ -15,4 +15,14 @@
     characters long, but it must be at least
     {{ control.errors.minlength.requiredLength }}
   </div>
+  <div *ngIf="control.errors.maxlength">
+    Value you entered is
+    {{ control.errors.maxlength.actualLength }}
+    characters long, but it cannot be longer than
+    {{ control.errors.maxlength.requiredLength }}
+    characters
+  </div>
+  <div *ngIf="control.errors.pattern">
+    Invalid format
+  </div>
 </ng-container>
