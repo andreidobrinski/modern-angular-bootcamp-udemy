@@ -1,7 +1,9 @@
 <form #emailForm="ngForm">
   <input
+    type="email"
     name="email"
     required
+    pattern=".+@.+\..+"
     [(ngModel)]="email"
   />
 </form>
