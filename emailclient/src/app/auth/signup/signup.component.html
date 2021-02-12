@@ -6,6 +6,10 @@
       formControlName="username"
     />
   </div>
+  <app-input
+    label="Username"
+    [control]="authForm.get('username')"
+  ></app-input>
   <div class="field">
     <label>Password</label>
     <input
