@@ -2,6 +2,7 @@
   <label>{{ label }}</label>
   <input
     [formControl]="control"
+    [type]="inputType"
   />
   <div *ngIf="showErrors()" class="ui pointing red basic label">
     <p *ngIf="control.errors.required">

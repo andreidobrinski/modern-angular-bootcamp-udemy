@@ -3,14 +3,17 @@
   <app-input
     label="Username"
     [control]="authForm.get('username')"
+    inputType="text"
   ></app-input>
   <app-input
     label="Password"
     [control]="authForm.get('password')"
+    inputType="password"
   ></app-input>
   <app-input
     label="Password Confirmation"
     [control]="authForm.get('passwordConfirmation')"
+    inputType="password"
   ></app-input>
   <button class="ui submit button primary">
     Submit
