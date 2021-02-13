@@ -31,6 +31,12 @@
     <p *ngIf="authForm.errors.passwordsDontMatch">
       Password and password confirmation must match
     </p>
+    <p *ngIf="authForm.errors.noConnection">
+      No internet connection detected, failed to sign up
+    </p>
+    <p *ngIf="authForm.errors.unknownError">
+      Failed to sign up
+    </p>
   </div>
 
   <div>
