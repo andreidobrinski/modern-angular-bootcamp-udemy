@@ -5,6 +5,16 @@ interface UsernameAvailableResponse {
   available: boolean;
 }
 
+interface SignupCredentials {
+  username: string;
+  password: string;
+  passwordConfirmation: string;
+}
+
+interface SignupResponse {
+  username: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,9 +31,9 @@ export class AuthService {
       )
   }
 
-  signup(credentials: any) {
+  signup(credentials: SignupCredentials) {
     return this.http
-      .post<any>(
+      .post<SignupResponse>(
         `${this.rootUrl}/auth/signup`,
         credentials
       )
