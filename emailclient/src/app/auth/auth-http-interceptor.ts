@@ -3,9 +3,11 @@ import {
   HttpEvent,
   HttpInterceptor,
   HttpHandler,
-  HttpRequest
+  HttpRequest,
+  HttpEventType
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { tap, filter } from 'rxjs/operators';
 
 @Injectable()
 export class AuthHttpInterceptor implements HttpInterceptor {
@@ -18,5 +20,12 @@ export class AuthHttpInterceptor implements HttpInterceptor {
     });
 
     return next.handle(modifiedReq);
+      // watch events around a request
+      // .pipe(
+      //   filter(val => val.type === HttpEventType.Sent),
+      //   tap(val => {
+          
+      //   })
+      // )
   }
 }
