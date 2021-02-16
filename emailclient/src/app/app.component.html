@@ -7,7 +7,7 @@
       Angular Email
     </a>
     <div class="right menu">
-      <ng-container *ngIf="signedin">
+      <ng-container *ngIf="signedin$ | async">
         <a
           routerLink="/inbox"
           routerLinkActive="active"
@@ -23,7 +23,7 @@
           Sign Out
         </a>
       </ng-container>
-      <ng-container *ngIf="!signedin">
+      <ng-container *ngIf="!(signedin$ | async)">
         <a
           routerLink="/"
           routerLinkActive="active"
