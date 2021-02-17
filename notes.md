@@ -124,3 +124,9 @@ Template forms
 Input Masking: changing how inputted data looks in the UI. eg. adding a slash or formatting a certain way. Doesn't necessarily change the data stored in the model.
 
 - input masking ngx-mask package treats UI input differently than data input, which may cause issues
+
+Angular Guards
+
+- `canActivate`: guards against visiting a route
+- `canActivateChild`: guards against visiting a child route
+- `canLoad`: guards against lazy-loading module and routes inside of it
