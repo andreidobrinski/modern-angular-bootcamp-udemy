@@ -1,5 +1,9 @@
 <h3>Sign In</h3>
-<form [formGroup]="authForm" class="ui form">
+<form
+  (submit)="onSubmit()"
+  [formGroup]="authForm"
+  class="ui form"
+>
   <app-input
     inputType="text"
     label="Username"
