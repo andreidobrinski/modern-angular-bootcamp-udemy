@@ -1,4 +1,4 @@
-<form [formGroup]="emailForm" class="ui form">
+<form (ngSubmit)="onSubmit()" [formGroup]="emailForm" class="ui form">
   <app-input
     [control]="emailForm.get('to')"
     inputType="email"
