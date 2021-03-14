@@ -4,6 +4,15 @@ import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { weatherKey } from '../../../apiKey';
 
+interface OpenWeatherResponse {
+  list: {
+    dt_txt: string;
+    main: {
+      temp: number
+    }
+  }[]
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,7 +31,7 @@ export class ForecastService {
             .set('units', 'metric')
             .set('appid', weatherKey)
         }),
-        switchMap(params => this.http.get(this.url, { params }))
+        switchMap(params => this.http.get<OpenWeatherResponse>(this.url, { params }))
       );
   }
 
