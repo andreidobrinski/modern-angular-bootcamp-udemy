@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpParams, HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, switchMap, pluck, mergeMap, filter, toArray } from 'rxjs/operators';
+import { map, switchMap, pluck, mergeMap, filter, toArray, share } from 'rxjs/operators';
 import { weatherKey } from '../../../apiKey';
 
 interface OpenWeatherResponse {
@@ -41,7 +41,8 @@ export class ForecastService {
             temp: value.main.temp
           }
         }),
-        toArray()
+        toArray(),
+        share()
       );
   }
 
