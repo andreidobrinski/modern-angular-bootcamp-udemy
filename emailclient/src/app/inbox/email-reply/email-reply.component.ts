@@ -7,13 +7,13 @@ import { EmailService } from '../email.service';
   templateUrl: './email-reply.component.html',
   styleUrls: ['./email-reply.component.css']
 })
-export class EmailReplyComponent implements OnInit {
+export class EmailReplyComponent {
   showModal = false;
   @Input() email: Email;
 
   constructor(private emailService: EmailService) { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     const text = this.email.text.replace(/\n/gi, '\n> ');
 
     this.email = {
