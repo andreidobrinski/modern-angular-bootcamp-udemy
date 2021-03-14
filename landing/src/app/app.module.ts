@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WeatherModule } from './weather/weather.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { WeatherModule } from './weather/weather.module';
     BrowserModule,
     HttpClientModule,
     WeatherModule,
+    NotificationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
