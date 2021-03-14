@@ -7,10 +7,13 @@ import { ForecastService } from '../forecast.service';
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
+  forecastData = [];
+
   constructor(forecastService: ForecastService) {
     forecastService.getCurrentLocation()
-      .subscribe((weatherResponse) => {
-        
+      .subscribe(forecastData => {
+        // @ts-ignore
+        this.forecastData = forecastData;
       });
   }
 
