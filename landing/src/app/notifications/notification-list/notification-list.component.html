@@ -4,7 +4,7 @@
   [ngClass]="message.type === 'error' ? 'alert-danger' : 'alert-success'"
 >
   {{ message.text }}
-  <button class="close">
+  <button (click)="clearMessage(message.id)" class="close">
     x
   </button>
 </div>

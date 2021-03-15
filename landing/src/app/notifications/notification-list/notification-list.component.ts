@@ -10,11 +10,14 @@ import { NotificationsService, Command } from '../notifications.service';
 export class NotificationListComponent implements OnInit {
   messages: Observable<Command[]>;
 
-  constructor(notificationsService: NotificationsService) {
-    this.messages = notificationsService.messagesOutput;
+  constructor(private notificationsService: NotificationsService) {
+    this.messages = this.notificationsService.messagesOutput;
   }
 
   ngOnInit(): void {
   }
 
+  clearMessage(id: number) {
+    this.notificationsService.clearMessage(id);
+  }
 }
