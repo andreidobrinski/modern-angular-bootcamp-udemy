@@ -8,6 +8,7 @@ import { NaArticleListComponent } from './na-article-list/na-article-list.compon
   declarations: [NaArticleListComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [NaArticleListComponent]
 })
 export class NewsApiModule { }
