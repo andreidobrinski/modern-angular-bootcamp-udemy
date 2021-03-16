@@ -1,1 +1,14 @@
-<p>paginator works!</p>
+<nav>
+  <ul class="pagination">
+    <li
+      *ngFor="let page of pageOptions"
+      class="page-item"
+    >
+      <a
+        class="page-link"
+      >
+        {{ page }}
+      </a>
+    </li>
+  </ul>
+</nav>
