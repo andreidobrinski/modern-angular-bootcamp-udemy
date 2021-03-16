@@ -3,6 +3,7 @@
     <li
       *ngFor="let page of pageOptions"
       class="page-item"
+      [ngClass]="page === currentPage ? 'active' : ''"
     >
       <a
         class="page-link"
